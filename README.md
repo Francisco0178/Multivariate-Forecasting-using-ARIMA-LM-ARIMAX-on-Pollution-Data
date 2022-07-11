@@ -8,7 +8,7 @@ Cada cierto tiempo las autoridades se ven con la obligación de decretar emergen
 ## Contexto
 A fines de los años 50’s, la zona Quintero-Puchuncaví se consolida como zona industrial a escala regional y nacional, generando consecuencias negativas en el medio ambiente y en la salud de sus habitantes. Debido a los procesos productivos de la industria del complejo Ventanas ubicado en esta zona, sumado a las características geográficas y meteorológicas del lugar, se favorece la formación y acumulación de contaminantes. El año 1993 debido a la alta presencia de dióxido de azufre (SO2), anhídrido sulfuroso (O2) y material particulado (PM10) por el emplazamiento del Complejo Industrial Ventanas, la zona se convirtió en la primera zona saturada del país (INDH, 2015), enfrentándola a constantes conflictos sociales y ambientales.
 
-![alt text](https://github.com/Francisco0178/Multivariate-Forecasting-using-ARIMA-LM-ARIMAX-on-Pollution-Data/tree/main/material/zona%sacrificio.JPG)
+![alt text](https://github.com/Francisco0178/Multivariate-Forecasting-using-ARIMA-LM-ARIMAX-on-Pollution-Data/tree/main/material/complejo_industrial_ventanas.jpeg)
 
 ## Solución
 Como solución planteamos un modelo de predicción que pueda realizar un pronóstico acabado de las emisiones considerando las variables medioambientales que las influyen. De esta forma, se podrá tener una visión futura del comportamiento de la emisión de estos gases y detectar con anticipación en qué días los niveles podrían alcanzar los límites de alarma y finalmente poder decretar medidas preventivas con mayor antelación.
@@ -32,12 +32,16 @@ El primer modelo fue ARIMA, este modelo consideró solamente una serie de tiempo
 | LM            | 32,086        | 4,300 | 5,664 |
 | ARIMAX        | 23,775        | 3,717 | 4,876 |
 
+![alt text](https://github.com/Francisco0178/Multivariate-Forecasting-using-ARIMA-LM-ARIMAX-on-Pollution-Data/tree/main/data/Quintero/pm25.png)
+
 ### SO2
 | Modelo        | MSE           | MAE   | RMSE  | 
 | ------------- |:-------------:| -----:| -----:|
 | ARIMA         | 68,6248       | 5,457 | 8,284 |
 | LM            | 71,423        | 5,678 | 8,451 |
 | ARIMAX        | 59,057        | 5,187 | 7,684 |
+
+![alt text](https://github.com/Francisco0178/Multivariate-Forecasting-using-ARIMA-LM-ARIMAX-on-Pollution-Data/tree/main/data/Quintero/so2.png)
 
 ## Conclusión
 Como conclusión obtuvimos que los modelos que consideran las variables meteorológicas (Linear Regression y ARIMAX) pueden lograr marcar una tendencia del comportamiento, sin embargo no son capaces de predecir con exactitud el valor actual del contaminante. Mientras que el modelo ARIMA no es capaz de realizar una buena predicción. Conocer la tendencia del comportamiento a corto plazo puede facilitar la visión a futuro de la presencia de estos contaminantes y de esta forma se puede tener una noción de qué días se debería ejecutar una medida preventiva.
